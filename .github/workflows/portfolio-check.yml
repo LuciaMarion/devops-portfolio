@@ -90,7 +90,7 @@ jobs:
           )
           FALTANTES=0
           for SEC in "${SECCIONES[@]}"; do
-            if grep -q "$SEC" README.md; then
+            if grep -qi "$SEC" README.md; then
               echo "  [OK]  Sección: $SEC"
             else
               echo "  [FAIL] Falta sección: $SEC"
